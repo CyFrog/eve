@@ -1,5 +1,5 @@
 require("dotenv").config();
-// const tokenId = process.env.BOT_TOKEN;
+const tokenId = process.env.BOT_TOKEN;
 
 //const { transactionHandler } = require("./src/transactionHandler");
 // const EventSource = require("eventsource");
