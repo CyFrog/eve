@@ -1,10 +1,12 @@
 // require("dotenv").config();
-    //const { transactionHandler } = require("./src/transactionHandler");
-// const EventSource = require("eventsource");
-   //const btoa = require("btoa");
 // const tokenId = process.env.BOT_TOKEN;
+
+//const { transactionHandler } = require("./src/transactionHandler");
+// const EventSource = require("eventsource");
+//const btoa = require("btoa");
+
 const Discord = require('discord.js');
-  const client = new Discord.Client();
+const client = new Discord.Client();
 
 console.log("start");
 
@@ -18,5 +20,4 @@ client.on('message', msg => {
   }
   });
 
-// client.login(tokenId);
-console.log(tokenId);
+client.login(tokenId);
