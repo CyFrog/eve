@@ -5,7 +5,6 @@
 // const tokenId = process.env.BOT_TOKEN;
 const Discord = require('discord.js');
   const client = new Discord.Client();
-  let envID = "";
 
 console.log("start");
 
