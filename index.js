@@ -7,7 +7,7 @@ const Discord = require('discord.js');
   const client = new Discord.Client();
   let envID = "";
 
-console.log("start);
+console.log("start");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
