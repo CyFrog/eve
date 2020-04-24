@@ -17,5 +17,5 @@ client.on('message', msg => {
   }
   });
 
-client.login(tokenId);
-
+// client.login(tokenId);
+console.log(tokenId);
