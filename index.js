@@ -28,11 +28,19 @@ client.on('message', msg => {
       if(dieRoll==5) { stun+=1; } 
       if((dieRoll==1)||(dieRoll==2)) { glitch+=1; } }
     reply=diceText+" Total: "+amount + " High: "+high;
-    if(crit>1) { reply+=", "+crit+ " critical successes"; }
-    else if(crit==1) { reply+=", 1 critical success"; }
-    else if(stun>0) { reply+=", "+stun+" stun"; }
-    else if(high>2) { if(glitch >= (x/2)) { reply+=", glitch"; } }
-    else { reply+=", fail"; }
+    if(high>4) {
+      if(crit>3) { reply+=", Annihilation! "+crit+ " critical successes"; }
+      else if(crit==3) { reply+=", triple critical"; }
+      else if(crit==2) { reply+=", double critical"; }
+      else if(crit==1) { reply+=", critical"; }
+      else if(stun>0) { reply+=", "+stun+" stun"; }
+      if(glitch >= (x/2)) { reply+=", glitch"; } }
+    else if(high>2) { 
+      if(glitch >= (x/2)) { reply+=", glitch"; } 
+      else { reply+=", miss"; } }
+    else if(high>1) { reply+=", fumble"; }
+    else { reply+=", epic fail"; }
+
     msg.reply(reply); 
     x=0; input=""; }
   if (msg.content === 'roll') { msg.reply('pong'); }
