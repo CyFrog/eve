@@ -20,17 +20,17 @@ client.on('message', msg => {
   let x=0; let input="";
   input=msg.content; 
   if(input === "roll 1d6") { input="roll"; x=1; }
-  if(input === "roll 1d6") { input="roll"; x=2; }
-  if(input === "roll 1d6") { input="roll"; x=3; }
-  if(input === "roll 1d6") { input="roll"; x=4; }
-  if(input === "roll 1d6") { input="roll"; x=5; }
-  if(input === "roll 1d6") { input="roll"; x=6; }
-  if(input === "roll 1d6") { input="roll"; x=7; }
-  if(input === "roll 1d6") { input="roll"; x=8; }
-  if(input === "roll 1d6") { input="roll"; x=9; }
-  if(input === "roll 1d6") { input="roll"; x=10; }
-  if(input === "roll 1d6") { input="roll"; x=11; }
-  if(input === "roll 1d6") { input="roll"; x=12; }
+  if(input === "roll 2d6") { input="roll"; x=2; }
+  if(input === "roll 3d6") { input="roll"; x=3; }
+  if(input === "roll 4d6") { input="roll"; x=4; }
+  if(input === "roll 5d6") { input="roll"; x=5; }
+  if(input === "roll 6d6") { input="roll"; x=6; }
+  if(input === "roll 7d6") { input="roll"; x=7; }
+  if(input === "roll 8d6") { input="roll"; x=8; }
+  if(input === "roll 9d6") { input="roll"; x=9; }
+  if(input === "roll 10d6") { input="roll"; x=10; }
+  if(input === "roll 11d6") { input="roll"; x=11; }
+  if(input === "roll 12d6") { input="roll"; x=12; }
   if (input === 'roll') {
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
     for(i=0; i<x; i++) { 
