@@ -24,7 +24,7 @@ client.on('message', msg => {
       dieRoll=parseInt((Math.random() * 6)+1);
       diceText+=dice[dieRoll]+" "; amount+=dieRoll; if(dieRoll==6) { crits+=1; } }
     reply=diceText+" "+amount
-    if(crits>0) { reply+= crits+ " crits"; }
+    if(crits>0) { reply+=", "+crits+ " crits"; }
     msg.reply(reply); 
     x=0; input="";
   }
