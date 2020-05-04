@@ -18,7 +18,7 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   let x=0; let input="";
-  input=msg.content; 
+  input=msg.content.toLowerCase(); 
   if(input === "roll 1d6") { input="roll"; x=1; }
   if(input === "roll 2d6") { input="roll"; x=2; }
   if(input === "roll 3d6") { input="roll"; x=3; }
