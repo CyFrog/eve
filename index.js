@@ -26,7 +26,7 @@ client.on('message', msg => {
       if(dieRoll>high) { high=dieRoll; }
       if(dieRoll==6) { crit+=1; } 
       if(dieRoll==5) { stun+=1; } 
-      if(dieRoll==1 or dieRoll==2) { glitch+=1; } }
+      if((dieRoll==1)||(dieRoll==2)) { glitch+=1; } }
     reply=diceText+" Total: "+amount + " High: "+high;
     if(crit>1) { reply+=", "+crit+ " critical successes"; }
     else if(crit==1) { reply+=", 1 critical success"; }
