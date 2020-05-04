@@ -23,7 +23,7 @@ client.on('message', msg => {
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
       diceText+=dice[dieRoll]+" "; amount+=dieRoll; 
-      if dieRoll>high) { high=dieRoll; }
+      if(dieRoll>high) { high=dieRoll; }
       if(dieRoll==6) { crit+=1; } 
       if(dieRoll==5) { stun+=1; } }
     reply=diceText+" "+amount
