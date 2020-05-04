@@ -17,7 +17,7 @@ client.on('ready', () => {
   });
 
 client.on('message', msg => {
-  let message=msg.content.toLowerCase(); let [input,x]=message.split(" "); let crit=0; let stun=0; let high=0;
+  let message=msg.content.toLowerCase(); let [input,x]=message.split(" "); let crit=0; let stun=0; let high=0; let glitch=0;
   if (input === 'roll') {
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
     for(i=0; i<x; i++) { 
@@ -25,17 +25,16 @@ client.on('message', msg => {
       diceText+=dice[dieRoll]+" "; amount+=dieRoll; 
       if(dieRoll>high) { high=dieRoll; }
       if(dieRoll==6) { crit+=1; } 
-      if(dieRoll==5) { stun+=1; } }
-    reply=diceText+" "+amount
+      if(dieRoll==5) { stun+=1; } 
+      if(dieRoll==1 or dieRoll==2) { glitch+=1; } }
+    reply=diceText+" Total: "+amount + " High: "+high;
     if(crit>1) { reply+=", "+crit+ " critical successes"; }
     else if(crit==1) { reply+=", 1 critical success"; }
     else if(stun>0) { reply+=", "+stun+" stun"; }
-    else if(high>2) { reply+=", fail"; }
-    else reply+=", epic fail";
-    
+    else if(high>2) { if(glitch >= (x/2)) { reply+=", glitch"; } }
+    else { reply+=", fail"; }
     msg.reply(reply); 
-    x=0; input="";
-  }
+    x=0; input=""; }
   if (msg.content === 'roll') { msg.reply('pong'); }
 });
 
