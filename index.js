@@ -1,28 +1,25 @@
 require("dotenv").config();
 
-  
-let token_obj = require(`token.json`);
-var token = token_obj["token"];
-// let silvia_channel_id_obj = require(`silvia_channel_id.json`);
-// var silvia_channel_id = silvia_channel_id_obj["silvia_channel_id"];
-let owner_id_obj = require(`owner_discord_id.json`);
-var owner_discord_id = owner_id_obj["owner_discord_id"];
-// var report_channel = require("report_channel.json");
-var channel_id = report_channel["channel"];
+// let token_obj = require(`token.json`); var token = token_obj["token"];
+// let owner_id_obj = require(`owner_discord_id.json`); var owner_discord_id = owner_id_obj["owner_discord_id"];
 
 // NPM MODULES
-const commando = require("discord.js-commando");
-const path = require("path");
-const oneLine = require("common-tags").oneLine;
-const sqlite = require("sqlite");
-sqlite.open("./database.sqlite3");
 
-const com = new commando.Client({
-  owner: owner_discord_id,
-  commandPrefix: "-",
-  disableEveryone: true,
-  unknownCommandResponse: false
-});
+// const commando = require("discord.js-commando");
+
+// const com = new commando.Client({ owner: owner_discord_id, commandPrefix: "-", 
+// disableEveryone: true, unknownCommandResponse: false });
+
+// const path = require("path");
+
+// let silvia_channel_id_obj = require(`silvia_channel_id.json`);
+// var silvia_channel_id = silvia_channel_id_obj["silvia_channel_id"];
+// var report_channel = require("report_channel.json");
+// var channel_id = report_channel["channel"];
+
+const oneLine = require("common-tags").oneLine;
+// const sqlite = require("sqlite"); sqlite.open("./database.sqlite3");
+
 
 
 const tokenId = process.env.BOT_TOKEN;
