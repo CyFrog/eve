@@ -70,7 +70,7 @@ client.on('message', msg => {
     msg.reply(reply); 
     x=0; input=""; }
   else if (input === 'ping') { msg.reply('pong'); }
-  else if (input === 'data') { msg.reply("Username: "+); }
+  else if (input === 'data') { msg.reply("Username: "+" none"); }
 });
 
 client.login(tokenId);
