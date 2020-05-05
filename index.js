@@ -1,4 +1,30 @@
 require("dotenv").config();
+
+  
+let token_obj = require(`token.json`);
+var token = token_obj["token"];
+// let silvia_channel_id_obj = require(`silvia_channel_id.json`);
+// var silvia_channel_id = silvia_channel_id_obj["silvia_channel_id"];
+let owner_id_obj = require(`owner_discord_id.json`);
+var owner_discord_id = owner_id_obj["owner_discord_id"];
+// var report_channel = require("report_channel.json");
+var channel_id = report_channel["channel"];
+
+// NPM MODULES
+const commando = require("discord.js-commando");
+const path = require("path");
+const oneLine = require("common-tags").oneLine;
+const sqlite = require("sqlite");
+sqlite.open("./database.sqlite3");
+
+const client = new commando.Client({
+  owner: owner_discord_id,
+  commandPrefix: "-",
+  disableEveryone: true,
+  unknownCommandResponse: false
+});
+
+
 const tokenId = process.env.BOT_TOKEN;
   let dice=["🎲","⚀","⚁","⚂","⚃","⚄","⚅"]; 
 // ["⚀","⚁","⚂","⚃","⚄","⚅"]
@@ -43,7 +69,8 @@ client.on('message', msg => {
 
     msg.reply(reply); 
     x=0; input=""; }
-  if (msg.content === 'roll') { msg.reply('pong'); }
+  else if (input === 'ping') { msg.reply('pong'); }
+  else if (input === 'data') { msg.reply("Username: "+); }
 });
 
 client.login(tokenId);
