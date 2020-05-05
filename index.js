@@ -37,9 +37,10 @@ client.on('message', msg => {
       if(glitch >= (x/2)) { reply+=", glitch"; } 
       else { reply+=", miss"; } }
     else if(high>1) { reply+=", fumble"; }
-    else { reply+=", epic fail"; } }
-
-    if (input === 'soft') {
+    else { reply+=", epic fail"; } 
+    x=0; input=""; msg.reply(reply); }
+  
+  if (input === 'soft') {
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
@@ -56,10 +57,9 @@ client.on('message', msg => {
       if(glitch >= (x/2)) { reply+=", glitch"; } 
       else { reply+=", miss"; } }
     else if(high>1) { reply+=", fumble"; }
-    else { reply+=", epic fail"; } }
-      
-      msg.reply(reply); 
-    x=0; input=""; }
+    else { reply+=", epic fail"; }
+    x=0; input=""; msg.reply(reply); }
+  
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
 });
