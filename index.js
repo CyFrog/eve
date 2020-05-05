@@ -17,8 +17,9 @@ client.on('message', msg => {
   let message=msg.content.toLowerCase(); 
   let [input,x]=message.split(" ");
   if (input === 'roll') {
-    if(x<1) { reply="I want to play!"; x=0; input=""; msg.reply(reply); }
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
+    if(x<1) { reply="I want to play!"; x=0; input=""; msg.reply(reply); }
+    else {
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
       diceText+=dice[dieRoll]+" "; amount+=dieRoll; 
@@ -41,10 +42,11 @@ client.on('message', msg => {
     else if(high>1) { reply+=", critical fumble"; }
     else { reply+=", epic fail"; } 
     x=0; input=""; msg.reply(reply); }
-  
+  }
   if (input === 'soft') {
-    if(x<1) { reply="I want to dance!"; x=0; input=""; msg.reply(reply); }
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
+  if(x<1) { reply="I want to dance!"; x=0; input=""; msg.reply(reply); }
+  else {
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
       diceText+=dice[dieRoll]+" "; amount+=dieRoll; 
@@ -62,7 +64,7 @@ client.on('message', msg => {
     else if(high>1) { reply+=", critical fumble"; }
     else { reply+=", epic fail"; }
     x=0; input=""; msg.reply(reply); }
-  
+  }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
 });
