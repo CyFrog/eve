@@ -65,7 +65,7 @@ client.on('message', msg => {
       x=0; input=""; msg.reply(reply); }
     else { reply="I want to dance!"; x=0; input=""; msg.reply(reply); } }
   if (input === 'talk') {
-    reply= "Hi, I'm "+${client.user.tag}; if (x) { reply+="\nI don't know much about "+x; } 
+    reply= "Hi, I'm "+'${client.user.tag}'; if (x) { reply+="\nI don't know much about "+x; } 
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
