@@ -14,8 +14,9 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   let crit=0; let stun=0; let high=0; let glitch=0; let reply="";
-  let message=msg.content.toLowerCase(); 
-  let [input,x]=message.split(" ");
+  let message=msg.content.toLowerCase();
+  let [words]=message.split(" ");
+  let [input,x]=[words];
   if (input === 'roll') {
     let dieRoll=0; let amount=0; let diceText=""; 
     if(x>0) {
@@ -68,9 +69,9 @@ client.on('message', msg => {
     reply= "Hi, I'm "+client.user.tag; 
     if (x) { 
 //      let [words]=x.split(" ");
-//      if(words[0]) { reply+="\n first word was"+words[0]; }        
-//      if(words[1]) { reply+="\n second word was"+words[0]; }       
-//      if(words[2]) { reply+="\n third word was"+words[0]; }       
+     if(words[0]) { reply+="\n first word was"+words[0]; }        
+      if(words[1]) { reply+="\n second word was"+words[0]; }       
+      if(words[2]) { reply+="\n third word was"+words[0]; }       
 //      if(words[3]) { reply+="\n fourth word was"+words[0]; }       
 //      if(words[4]) { reply+="\n fifth word was"+words[0]; }       
 //      else { 
