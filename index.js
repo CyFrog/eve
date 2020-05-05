@@ -69,7 +69,7 @@ client.on('message', msg => {
     reply= "Hi, I'm "+client.user.tag; 
     if (x) { words.shift(); 
        if(words[0]==="roll") { reply+="\n Type `roll` and a number, like `roll 2`. Try it." }
-       else { words.shift(); let answer=words.join(" "); reply+="\nI don't know much about `"+answer+"`"; } }
+       else { let answer=words.join(" "); reply+="\nI don't know much about `"+answer+"`"; } }
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
