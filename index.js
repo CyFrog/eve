@@ -17,7 +17,7 @@ const oneLine = require("common-tags").oneLine;
 const sqlite = require("sqlite");
 sqlite.open("./database.sqlite3");
 
-const client = new commando.Client({
+const commando = new commando.Client({
   owner: owner_discord_id,
   commandPrefix: "-",
   disableEveryone: true,
