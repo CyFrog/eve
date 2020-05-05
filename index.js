@@ -67,7 +67,7 @@ client.on('message', msg => {
     else { reply="I want to dance!"; x=0; input=""; msg.reply(reply); } }
   if (input === 'talk') {
     reply= "Hi, I'm "+client.user.tag; 
-    if (x) { words.pop; words.pop(); let answer=words.join(" ");
+    if (x) { words.shift(); words.shift(); let answer=words.join(" ");
         reply+="\nI don't know much about `"+answer+"`"; 
 //        } 
       }
