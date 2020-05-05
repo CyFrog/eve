@@ -13,9 +13,11 @@ client.on('ready', () => {
   });
 
 client.on('message', msg => {
-  let message=msg.content.toLowerCase(); let [input,x]=message.split(" "); let crit=0; let stun=0; let high=0; let glitch=0;
-
+  let crit=0; let stun=0; let high=0; let glitch=0;
+  let message=msg.content.toLowerCase(); 
+  let [input,x]=message.split(" ");
   if (input === 'roll') {
+    if(x<1) { reply="I want to play!"; x=0; input=""; msg.reply(reply); }
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
@@ -41,6 +43,7 @@ client.on('message', msg => {
     x=0; input=""; msg.reply(reply); }
   
   if (input === 'soft') {
+    if(x<1) { reply="I want to dance!"; x=0; input=""; msg.reply(reply); }
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
     for(i=0; i<x; i++) { 
       dieRoll=parseInt((Math.random() * 6)+1);
