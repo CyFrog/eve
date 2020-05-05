@@ -34,9 +34,9 @@ client.on('message', msg => {
       if(stun>0) { reply+=", "+stun+" stun"; }
       if(glitch >= (x/2)) { reply+=", glitch"; } }
     else if(high>2) { 
-      if(glitch >= (x/2)) { reply+=", glitch"; } 
+      if(glitch >= (x/2)) { reply+=", critical fail"; } 
       else { reply+=", miss"; } }
-    else if(high>1) { reply+=", fumble"; }
+    else if(high>1) { reply+=", critical fumble"; }
     else { reply+=", epic fail"; } 
     x=0; input=""; msg.reply(reply); }
   
@@ -54,9 +54,9 @@ client.on('message', msg => {
       if(stun>0) { reply+=", "+stun+" stun"; }
       if(glitch >= (x/2)) { reply+=", glitch"; } }
     else if(high>2) { 
-      if(glitch >= (x/2)) { reply+=", glitch"; } 
+      if(glitch >= (x/2)) { reply+=", critical fail"; } 
       else { reply+=", miss"; } }
-    else if(high>1) { reply+=", fumble"; }
+    else if(high>1) { reply+=", critical fumble"; }
     else { reply+=", epic fail"; }
     x=0; input=""; msg.reply(reply); }
   
