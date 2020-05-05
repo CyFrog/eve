@@ -15,8 +15,8 @@ client.on('ready', () => {
 client.on('message', msg => {
   let crit=0; let stun=0; let high=0; let glitch=0; let reply="";
   let message=msg.content.toLowerCase();
-  let [words]=message.split(" ");
-  let [input,x]=[words];
+  let words=message.split(" ");
+  let [input,x]=[words[0],words[1]];
   if (input === 'roll') {
     let dieRoll=0; let amount=0; let diceText=""; 
     if(x>0) {
