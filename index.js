@@ -1,6 +1,4 @@
 require("dotenv").config();
-const { getSession, saveSession } = require("./dynamoDB");
-const { sessionInitByData } = require("./sessionInit");
 
 const tokenId = process.env.BOT_TOKEN;
   let dice=["🎲","⚀","⚁","⚂","⚃","⚄","⚅"]; 
