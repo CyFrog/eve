@@ -37,7 +37,7 @@ client.on('message', msg => {
       if(glitch >= (x/2)) { reply+=", glitch"; } 
       else { reply+=", miss"; } }
     else if(high>1) { reply+=", fumble"; }
-    else { reply+=", epic fail"; }
+    else { reply+=", epic fail"; } }
 
     if (input === 'soft') {
     let dieRoll=0; let amount=0; let diceText=""; let reply="";
