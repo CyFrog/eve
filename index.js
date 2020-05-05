@@ -13,11 +13,11 @@ client.on('ready', () => {
   });
 
 client.on('message', msg => {
-  let crit=0; let stun=0; let high=0; let glitch=0;
+  let crit=0; let stun=0; let high=0; let glitch=0; let reply="";
   let message=msg.content.toLowerCase(); 
   let [input,x]=message.split(" ");
   if (input === 'roll') {
-    let dieRoll=0; let amount=0; let diceText=""; let reply="";
+    let dieRoll=0; let amount=0; let diceText=""; 
     if(x>0) {
       for(i=0; i<x; i++) { 
         dieRoll=parseInt((Math.random() * 6)+1);
@@ -44,7 +44,7 @@ client.on('message', msg => {
     else { reply="I want to play!"; x=0; input=""; msg.reply(reply); } }
   if (input === 'soft') {
 
-    let dieRoll=0; let amount=0; let diceText=""; let reply="";
+    let dieRoll=0; let amount=0; let diceText="";
     if(x>0) {
       for(i=0; i<x; i++) { 
         dieRoll=parseInt((Math.random() * 6)+1);
@@ -64,6 +64,9 @@ client.on('message', msg => {
       else { reply+=", epic fail"; }
       x=0; input=""; msg.reply(reply); }
     else { reply="I want to dance!"; x=0; input=""; msg.reply(reply); } }
+  if (input === 'talk') {
+    reply= "Hi, I'm ${client.user.tag} "; if (x) { reply+="I don't know much about "+x; } 
+    msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
 });
