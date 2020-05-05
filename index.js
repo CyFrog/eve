@@ -65,7 +65,15 @@ client.on('message', msg => {
       x=0; input=""; msg.reply(reply); }
     else { reply="I want to dance!"; x=0; input=""; msg.reply(reply); } }
   if (input === 'talk') {
-    reply= "Hi, I'm "+client.user.tag; if (x) { reply+="\nI don't know much about "+x; } 
+    reply= "Hi, I'm "+client.user.tag; 
+    if (x) { 
+      let [words]=x.split(" ");
+      if(words[0]) { reply+="\n first word was"+words[0]; }        
+      if(words[1]) { reply+="\n second word was"+words[0]; }       
+      if(words[2]) { reply+="\n third word was"+words[0]; }       
+      if(words[3]) { reply+="\n fourth word was"+words[0]; }       
+      if(words[4]) { reply+="\n fifth word was"+words[0]; }       
+      else { reply+="\nI don't know much about "+x; } }
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
