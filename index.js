@@ -56,7 +56,7 @@ client.on('message', msg => {
       if(glitch >= (x/2)) { reply+=", glitch"; } 
       else { reply+=", miss"; } }
     else if(high>1) { reply+=", fumble"; }
-    else { reply+=", epic fail"; }
+    else { reply+=", epic fail"; } }
       
       msg.reply(reply); 
     x=0; input=""; }
