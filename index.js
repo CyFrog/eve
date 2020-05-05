@@ -17,7 +17,7 @@ require("dotenv").config();
 // var report_channel = require("report_channel.json");
 // var channel_id = report_channel["channel"];
 
-const oneLine = require("common-tags").oneLine;
+// const oneLine = require("common-tags").oneLine;
 // const sqlite = require("sqlite"); sqlite.open("./database.sqlite3");
 
 
