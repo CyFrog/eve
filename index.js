@@ -1,7 +1,7 @@
 require("dotenv").config();
 // const Telegraf = require("telegraf");
 // const session = require("telegraf/session");
-const { textHandler } = require("./src/handlers/textHandler");
+// const { textHandler } = require("./src/handlers/textHandler");
 
 const tokenId = process.env.BOT_TOKEN;
   let dice=["🎲","⚀","⚁","⚂","⚃","⚄","⚅"]; 
