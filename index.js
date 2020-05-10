@@ -1,4 +1,7 @@
 require("dotenv").config();
+// const Telegraf = require("telegraf");
+// const session = require("telegraf/session");
+const { textHandler } = require("./src/handlers/textHandler");
 
 const tokenId = process.env.BOT_TOKEN;
   let dice=["🎲","⚀","⚁","⚂","⚃","⚄","⚅"]; 
@@ -79,10 +82,6 @@ client.login(tokenId);
 
 
 /*
-require("dotenv").config();
-const Telegraf = require("telegraf");
-const session = require("telegraf/session");
-const { textHandler } = require("./src/handlers/textHandler");
 const { commandHandler } = require("./src/handlers/commandHandler");
 const commandParts = require("telegraf-command-parts");
 const { notification } = require("./src/notification");
