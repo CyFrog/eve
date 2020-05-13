@@ -76,6 +76,12 @@ client.on('message', msg => {
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
+  else if (input === 'user') { 
+    reply="You are "+client.raw
+reply+="message.author.id "+message.author.id+"\n";
+reply+="user.id "+user.id+"\n";
+    msg.reply(reply); }
+
 });
 
 client.login(tokenId);
