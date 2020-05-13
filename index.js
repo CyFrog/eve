@@ -1,6 +1,4 @@
 require("dotenv").config();
-// const Telegraf = require("telegraf");
-// const session = require("telegraf/session");
 
 // const { textHandler } = require("./src/handlers/textHandler");
 
@@ -76,13 +74,10 @@ client.on('message', msg => {
        else { let answer=words.join(" "); reply+="\nI don't know much about `"+answer+"`"; } }
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
-  else if (input === 'data') { msg.reply("Username: "+" none"); }
+  else if (input === 'data') { msg.reply("msg.author.id "+msg.author.id+"\n";); }
   else if (input === 'user') { 
     reply="Collecting data \n";
-// reply+="msg.d.message_id "+msg.d.message_id+"/n";
-// reply+="msg.d.user_id "+msg.d.user_id+"/n";
- reply+="msg.author.id "+msg.author.id+"\n";
-// reply+="user.id "+user.id+"\n";
+    reply+="msg.author.id "+msg.author.id+"\n";
     msg.reply(reply); }
 
 });
