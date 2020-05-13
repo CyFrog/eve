@@ -79,7 +79,8 @@ client.on('message', msg => {
   else if (input === 'user') { 
     reply="Collecting data \n";
  reply+="msg.d.message_id "+msg.d.message_id+"/n";
-reply+="msg.author.id "+msg.author.id+"\n";
+ reply+="msg.d.user_id "+msg.d.user_id+"/n";
+// reply+="msg.author.id "+msg.author.id+"\n";
 // reply+="user.id "+user.id+"\n";
     msg.reply(reply); }
 
