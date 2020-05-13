@@ -74,7 +74,7 @@ client.on('message', msg => {
        else { let answer=words.join(" "); reply+="\nI don't know much about `"+answer+"`"; } }
     msg.reply(reply); }
   else if (input === 'ping') { msg.reply('pong'); }
-  else if (input === 'data') { msg.reply("msg.author.id "+msg.author.id+"\n";); }
+  else if (input === 'data') { msg.reply("msg.author.id "+msg.author.id+"\n"); }
   else if (input === 'user') { 
     reply="Collecting data \n";
     reply+="msg.author.id "+msg.author.id+"\n";
