@@ -77,8 +77,8 @@ client.on('message', msg => {
   else if (input === 'ping') { msg.reply('pong'); }
   else if (input === 'data') { msg.reply("Username: "+" none"); }
   else if (input === 'user') { 
-    reply="You are "+client.raw
-// reply+="msg.d.message_id "+msg.d.message_id+"/n";
+    reply="Collecting data \n";
+ reply+="msg.d.message_id "+msg.d.message_id+"/n";
 reply+="msg.author.id "+msg.author.id+"\n";
 // reply+="user.id "+user.id+"\n";
     msg.reply(reply); }
