@@ -44,7 +44,7 @@ client.on('message', msg => {
       else if(high>1) { reply+=", critical fumble"; }
       else { reply+=", epic fail"; } 
       x=0; input=""; msg.reply(reply); }
-    else { reply="I want to play!"; x=0; input=""; msg.reply(reply); } }
+    else { reply="I want to play!!!"; x=0; input=""; msg.reply(reply); } }
   if (input === 'soft') {
 
     let dieRoll=0; let amount=0; let diceText="";
